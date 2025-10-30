@@ -8,6 +8,7 @@ body {
   line-height: 1.6;
 }
 
+/* ---------- HEADER ---------- */
 header {
   text-align: center;
   padding: 40px 20px;
@@ -16,11 +17,16 @@ header {
 }
 
 .profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 100%;
+  max-width: 400px;     /* ensures photo never exceeds 400px */
+  height: auto;         /* keeps aspect ratio */
+  border-radius: 40%;
   border: 3px solid #ffd700;
   margin-bottom: 10px;
+  object-fit: cover;    /* crops larger photos neatly */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
@@ -33,8 +39,10 @@ h2 {
   color: #ffd700;
   border-left: 4px solid #ffd700;
   padding-left: 10px;
+  margin-top: 40px;
 }
 
+/* ---------- DOWNLOAD BUTTON ---------- */
 .download-btn {
   background-color: #ffd700;
   color: #000;
@@ -43,17 +51,21 @@ h2 {
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s;
+  display: inline-block;
+  margin-top: 10px;
 }
 .download-btn:hover {
   background-color: #e5c100;
 }
 
+/* ---------- SECTIONS ---------- */
 section {
   padding: 40px 60px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
+/* ---------- SKILLS GRID ---------- */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -67,6 +79,7 @@ section {
   font-size: 0.9em;
 }
 
+/* ---------- PROJECTS ---------- */
 .project {
   background: #161b22;
   padding: 20px;
@@ -74,21 +87,31 @@ section {
   margin-bottom: 30px;
   box-shadow: 0 0 10px #000;
 }
+
 .project img {
   width: 100%;
+  max-width: 800px;      /* keeps project images within 800px */
+  height: auto;          /* maintains aspect ratio */
   border-radius: 10px;
   border: 1px solid #ffd700;
   margin-bottom: 10px;
-}
-.project h3 {
-  color: #ffd700;
-  margin-bottom: 5px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.project h3 {
+  color: #ffd700;
+  margin-bottom: 8px;
+}
+
+/* ---------- FOOTER ---------- */
 footer {
   text-align: center;
   padding: 20px;
   background: #000;
   color: #aaa;
   font-size: 0.9em;
+  border-top: 1px solid #222;
 }
