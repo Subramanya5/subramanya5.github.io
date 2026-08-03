@@ -1,117 +1,336 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #0d1117;
-  color: #e6edf3;
-  line-height: 1.6;
-}
+/* ==========================================
+   GLOBAL STYLES
+========================================== */
 
-/* ---------- HEADER ---------- */
-header {
-  text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(145deg, #000, #1a1a1a);
-  border-bottom: 2px solid #ffd700;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.profile-photo {
-  width: 100%;
-  max-width: 400px;     /* ensures photo never exceeds 400px */
-  height: auto;         /* keeps aspect ratio */
-  border-radius: 40%;
-  border: 3px solid #ffd700;
-  margin-bottom: 10px;
-  object-fit: cover;    /* crops larger photos neatly */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+html{
+    scroll-behavior:smooth;
 }
 
-h1 {
-  color: #ffd700;
-  font-size: 2.2em;
-  margin: 0;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0d1117;
+    color:#e6edf3;
+    line-height:1.8;
+    overflow-x:hidden;
 }
 
-h2 {
-  color: #ffd700;
-  border-left: 4px solid #ffd700;
-  padding-left: 10px;
-  margin-top: 40px;
+/* ==========================================
+   HEADER
+========================================== */
+
+header{
+    text-align:center;
+    padding:70px 20px;
+    background:linear-gradient(145deg,#000,#1b1b1b);
+    border-bottom:2px solid #ffd700;
 }
 
-/* ---------- DOWNLOAD BUTTON ---------- */
-.download-btn {
-  background-color: #ffd700;
-  color: #000;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s;
-  display: inline-block;
-  margin-top: 10px;
-}
-.download-btn:hover {
-  background-color: #e5c100;
+.profile-photo{
+    width:100%;
+    max-width:280px;
+    height:auto;
+    border-radius:50%;
+    border:4px solid #ffd700;
+    object-fit:cover;
+    display:block;
+    margin:0 auto 20px;
+    transition:.4s;
 }
 
-/* ---------- SECTIONS ---------- */
-section {
-  padding: 40px 60px;
-  max-width: 1000px;
-  margin: auto;
+.profile-photo:hover{
+    transform:scale(1.04);
 }
 
-/* ---------- SKILLS GRID ---------- */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.skills-grid span {
-  background-color: #1f2329;
-  border: 1px solid #ffd700;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 0.9em;
+h1{
+    font-size:2.8rem;
+    color:#ffd700;
+    margin-bottom:10px;
+    font-weight:700;
 }
 
-/* ---------- PROJECTS ---------- */
-.project {
-  background: #161b22;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 0 10px #000;
+header p{
+    font-size:1.1rem;
+    color:#c9d1d9;
 }
 
-.project img {
-  width: 100%;
-  max-width: 800px;      /* keeps project images within 800px */
-  height: auto;          /* maintains aspect ratio */
-  border-radius: 10px;
-  border: 1px solid #ffd700;
-  margin-bottom: 10px;
-  object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+/* ==========================================
+   SECTION
+========================================== */
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 30px;
 }
 
-.project h3 {
-  color: #ffd700;
-  margin-bottom: 8px;
+h2{
+    color:#ffd700;
+    font-size:2rem;
+    border-left:5px solid #ffd700;
+    padding-left:15px;
+    margin-bottom:30px;
 }
 
-/* ---------- FOOTER ---------- */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #000;
-  color: #aaa;
-  font-size: 0.9em;
-  border-top: 1px solid #222;
+h3{
+    color:#ffd700;
+    margin-bottom:10px;
+}
+
+p{
+    color:#d0d7de;
+    font-size:17px;
+}
+
+/* ==========================================
+   DOWNLOAD BUTTON
+========================================== */
+
+.download-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 24px;
+    background:#ffd700;
+    color:#000;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#f0c300;
+    transform:translateY(-3px);
+}
+
+/* ==========================================
+   SKILLS
+========================================== */
+
+.skills-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.skills-grid span{
+    padding:10px 18px;
+    border:1px solid #ffd700;
+    border-radius:30px;
+    background:#161b22;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.skills-grid span:hover{
+    background:#ffd700;
+    color:#000;
+    transform:translateY(-3px);
+}
+
+/* ==========================================
+   PROJECTS
+========================================== */
+
+.project{
+    background:#161b22;
+    padding:30px;
+    border-radius:15px;
+    margin-bottom:35px;
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+    transition:.35s;
+}
+
+.project:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(255,215,0,.15);
+}
+
+.project img{
+    width:100%;
+    max-width:850px;
+    height:auto;
+    border-radius:12px;
+    display:block;
+    margin:20px auto;
+    border:1px solid #ffd700;
+}
+
+/* ==========================================
+   EXPERIENCE
+========================================== */
+
+.experience-card{
+    background:#161b22;
+    border-radius:15px;
+    padding:30px;
+    margin-bottom:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+    transition:.3s;
+}
+
+.experience-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(255,215,0,.15);
+}
+
+.experience-header{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.experience-header h3{
+    margin:0;
+}
+
+.company{
+    color:#ffd700;
+    font-weight:600;
+    font-size:18px;
+}
+
+.experience-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    color:#9ca3af;
+    margin-bottom:20px;
+}
+
+.experience-description{
+    margin-bottom:20px;
+}
+
+.experience-list{
+    padding-left:20px;
+}
+
+.experience-list li{
+    margin-bottom:10px;
+}
+
+.skill-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:20px;
+}
+
+.skill-tags span{
+    background:#ffd700;
+    color:#000;
+    padding:8px 16px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:500;
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a{
+    color:#ffd700;
+    text-decoration:none;
+    transition:.3s;
+}
+
+a:hover{
+    color:#ffffff;
+}
+
+/* ==========================================
+   LISTS
+========================================== */
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#000;
+    color:#9ca3af;
+    border-top:1px solid #222;
+    font-size:.95rem;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.6rem;
+    }
+
+    section{
+        padding:50px 20px;
+    }
+
+    .experience-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .experience-meta{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .skills-grid{
+        gap:10px;
+    }
+
+    .skills-grid span{
+        font-size:14px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .profile-photo{
+        max-width:220px;
+    }
+
+    h1{
+        font-size:1.8rem;
+    }
+
+    h2{
+        font-size:1.4rem;
+    }
+
+    p{
+        font-size:15px;
+    }
+
 }
