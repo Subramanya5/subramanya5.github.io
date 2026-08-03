@@ -10,7 +10,7 @@ The user's CV (Subramanya_S5.pdf) is included in the root for the "Download CV" 
 ## Files
 - `index.html` — Main website page
 - `styles.css` — Styles for the site
-- `Subramanya_S5.pdf` — CV (used by the Download CV button)
+- `Subramanya_M.pdf` — CV (used by the Download CV button)
 - `README.md` — This file
 
 ---
